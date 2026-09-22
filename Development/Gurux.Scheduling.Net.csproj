@@ -1,0 +1,37 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <Company>Gurux Ltd</Company>
+        <Authors>Gurux Ltd</Authors>
+        <Copyright>Copyright (c) 1998-2026 Gurux Ltd. All rights reserved.</Copyright>
+        <PackageProjectUrl>https://www.gurux.fi</PackageProjectUrl>
+        <Description>Gurux Scheduling component.</Description>
+        <Version Condition=" '$(BUILD_BUILDNUMBER)' == '' ">0.0.1-local</Version>
+        <Version Condition=" '$(BUILD_BUILDNUMBER)' != '' ">$(BUILD_BUILDNUMBER)</Version>
+        <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+        <TargetFramework>net10.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <RepositoryUrl>https://github.com/gurux/gurux.scheduling.net</RepositoryUrl>
+        <PackageTags>Scheduling</PackageTags>
+        <PackageId>Gurux.Scheduling</PackageId>
+        <PackageIcon>Gurux.Scheduling.png</PackageIcon>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
+        <PackageLicenseExpression>GPL-2.0-only</PackageLicenseExpression>
+        <ApplicationIcon>Gurux.Scheduling.ico</ApplicationIcon>
+        <IncludeSymbols>true</IncludeSymbols>
+        <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Compile Remove="Gurux.Scheduling.Net.Tests\**\*.cs" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Include="Gurux.Scheduling.png" Pack="true" PackagePath="\" />
+    </ItemGroup>
+    <ItemGroup>
+        <None Include="..\README.md" Pack="true" PackagePath="\" />
+    </ItemGroup>
+</Project>
